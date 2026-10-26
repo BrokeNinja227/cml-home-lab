@@ -24,12 +24,53 @@ Full device configs are in [`configs/`](configs/).
 
 ```
 PC1$ ping -c 4 192.168.20.10
-[paste output]
+PING 192.168.20.10 (192.168.20.10) 56(84) bytes of data.
+64 bytes from 192.168.20.10: icmp_seq=1 ttl=63 time=67.1 ms
+64 bytes from 192.168.20.10: icmp_seq=2 ttl=63 time=21.7 ms
+64 bytes from 192.168.20.10: icmp_seq=3 ttl=63 time=17.0 ms
+64 bytes from 192.168.20.10: icmp_seq=4 ttl=63 time=13.5 ms
+
+--- 192.168.20.10 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3016ms
+rtt min/avg/max/mdev = 13.457/29.806/67.101/21.728 ms
+```
+
+```
+PC2$ ping -c 4 192.168.10.10
+PING 192.168.10.10 (192.168.10.10) 56(84) bytes of data.
+64 bytes from 192.168.10.10: icmp_seq=1 ttl=63 time=14.9 ms
+64 bytes from 192.168.10.10: icmp_seq=2 ttl=63 time=25.7 ms
+64 bytes from 192.168.10.10: icmp_seq=3 ttl=63 time=17.4 ms
+64 bytes from 192.168.10.10: icmp_seq=4 ttl=63 time=12.1 ms
+
+--- 192.168.10.10 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3016ms
+rtt min/avg/max/mdev = 12.141/17.527/25.690/5.065 ms
 ```
 
 ```
 SW1# show vlan brief
-[paste output]
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Gi0/3
+10   Sales                            active    Gi0/1
+20   IT                               active    Gi0/2
+1002 fddi-default                     act/unsup 
+1003 token-ring-default               act/unsup 
+1004 fddinet-default                  act/unsup 
+1005 trnet-default                    act/unsup 
+```
+
+```
+R1# show ip interface brief
+Interface                  IP-Address      OK? Method Status                Protocol
+GigabitEthernet0/0         unassigned      YES NVRAM  up                    up      
+GigabitEthernet0/0.10      192.168.10.1    YES NVRAM  up                    up      
+GigabitEthernet0/0.20      192.168.20.1    YES NVRAM  up                    up      
+GigabitEthernet0/1         unassigned      YES NVRAM  administratively down down    
+GigabitEthernet0/2         unassigned      YES NVRAM  administratively down down    
+GigabitEthernet0/3         unassigned      YES NVRAM  administratively down down
 ```
 
 ## Troubleshooting
