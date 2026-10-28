@@ -1,3 +1,4 @@
+[Yaml.yaml](https://github.com/user-attachments/files/33977669/Yaml.yaml)
 # Phase 1: VLANs, trunking, and inter-VLAN routing (router-on-a-stick)
 
 ## Goal
