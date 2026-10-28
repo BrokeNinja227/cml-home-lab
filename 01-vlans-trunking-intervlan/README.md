@@ -1,4 +1,3 @@
-[Yaml.yaml](https://github.com/user-attachments/files/33977669/Yaml.yaml)
 # Phase 1: VLANs, trunking, and inter-VLAN routing (router-on-a-stick)
 
 ## Goal
@@ -83,7 +82,7 @@ GigabitEthernet0/3         unassigned      YES NVRAM  administratively down down
 VLANs isolate network traffic by default. Inter-VLAN routing allows separate virtual networks to communicate at layer 3.
 
 ## Files
-- `lab.yaml`: exported CML lab; import it to reproduce this topology
+- [intervlanrouting.yaml](https://github.com/user-attachments/files/33977669/Yaml.yaml): exported CML lab; import it to reproduce this topology
 - `configs/`: running configs for each device
 - `screenshots/`: topology and verification images
 
