@@ -1,4 +1,4 @@
-S1#show running-config
+SW1#show running-config
 Building configuration...
 
 Current configuration : 2838 bytes
