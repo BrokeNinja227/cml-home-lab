@@ -5,6 +5,7 @@ Use virtual machines to replicate inter-VLAN routing, allowing network traffic t
 
 ## Topology
 <img width="842" height="497" alt="Screenshot 2026-10-26 110524" src="https://github.com/user-attachments/assets/61b14e96-3557-4448-9cca-04958ee3b3f2" />
+
 ![Topology](screenshots/topology.png)
 
 **Devices:** R1 (IOSv), SW1 (IOSvL2), PC1 and PC2 (Ubuntu)
