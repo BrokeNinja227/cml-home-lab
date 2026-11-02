@@ -5,8 +5,14 @@ Use virtual machines to replicate inter-VLAN routing, allowing network traffic t
 
 ## Topology
 <img width="842" height="497" alt="Screenshot 2026-10-26 110524" src="https://github.com/user-attachments/assets/61b14e96-3557-4448-9cca-04958ee3b3f2" />
+![Topology](screenshots/topology.png)
 
-Devices: 1 router (IOSv), 1 switch (IOSvL2), 2 Ubuntu hosts
+**Devices:** R1 (IOSv), SW1 (IOSvL2), PC1 and PC2 (Ubuntu)
+
+**Links:**
+- R1 g0/0 ↔ SW1 g0/0 (trunk)
+- PC1 ens2 ↔ SW1 g0/1 (VLAN 10)
+- PC2 ens2 ↔ SW1 g0/2 (VLAN 20)
 
 ## IP Plan
 | VLAN / Network | Subnet | Gateway | Addressing method |
@@ -83,6 +89,6 @@ VLANs isolate network traffic by default. Inter-VLAN routing allows separate vir
 
 ## Files
 - [intervlanrouting.yaml](https://github.com/user-attachments/files/33977669/Yaml.yaml): exported CML lab; import it to reproduce this topology
-- `configs/`: running configs for each device
-- `screenshots/`: topology and verification images
+- [`configs/`](configs/): running configs for each device
+- [`screenshots/`](screenshots/): topology and verification images
 
